@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Kulim+Park");
+header {
+  padding: 50px;
+  background-color: purple;
+  margin-bottom: 500px; }
+
+body {
+  color: purple;
+  background-color: white; }
+
+footer {
+  padding: 50px;
+  background-color: purple;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  content: banane;
+  font-family: 'Roboto'; }
+  footer span {
+    color: white; }
+    footer span:hover {
+      color: blue; }
+
+.alert-green, .alert-red {
+  border: 1px solid white;
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
+  font-family: 'Kulim Park'; }
+
+.alert-green {
+  background-color: green; }
+
+.alert-red {
+  background-color: red; }
+
+#logo {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Open Sans'; }
+
+#slogan {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Open Sans'; }
+
+.grid-0 {
+  width: 0px; }
+
+.grid-1 {
+  width: 100px; }
+
+.grid-2 {
+  width: 200px; }
+
+.grid-3 {
+  width: 300px; }
+
+.grid-4 {
+  width: 400px; }
+
+.grid-5 {
+  width: 500px; }
+
+.grid-6 {
+  width: 600px; }
+
+.grid-1 {
+  width: 100px; }
+
+.grid-2 {
+  width: 200px; }
+
+.grid-3 {
+  width: 300px; }
+
+.grid-4 {
+  width: 400px; }
+
+.grid-5 {
+  width: 500px; }
+
+.grid-6 {
+  width: 600px; }
+
+.banane-icon {
+  background-image: url("/assets/banane.png"); }
+
+.poire-icon {
+  background-image: url("/assets/poire.png"); }
+
+.peche-icon {
+  background-image: url("/assets/peche.png"); }

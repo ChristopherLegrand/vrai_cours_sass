@@ -1,0 +1,123 @@
+$primaryColor: purple;
+$theme: purple;
+$liste: banane,
+poire,
+peche;
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@mixin border-radius($angle) {
+    -webkit-border-radius: $angle;
+    -moz-border-radius: $angle;
+    border-radius: $angle;
+}
+
+// FONTS
+@mixin googleFonts($font) {
+    @import url('https://fonts.googleapis.com/css?family=#{$font}');
+}
+
+@function acheterCetteMaison($maisonA, $maisonB) {
+    @return $maisonA / $maisonB + $maisonA * ($maisonB - $maisonA);
+}
+
+@include googleFonts(Roboto);
+@include googleFonts("Open+Sans");
+@include googleFonts("Kulim+Park");
+
+@import 'header';
+
+%theme {
+    @if($theme==purple) {
+        color: purple;
+        background-color: white;
+    }
+
+    @else if($theme==black) {
+        color: white;
+        background-color: black;
+    }
+
+    @else {
+        color: black;
+        background-color: white;
+    }
+}
+
+
+
+body {
+    @extend %theme;
+}
+
+footer {
+    padding: 50px;
+    background-color: $primaryColor;
+    @include border-radius(15px);
+    content: nth($liste, 1);
+    font-family: 'Roboto';
+
+    span {
+        color: white;
+
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+%alert {
+    border: 1px solid white;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Kulim Park';
+}
+
+.alert-green {
+    @extend %alert;
+    background-color: green;
+}
+
+.alert-red {
+    @extend %alert;
+    background-color: red;
+}
+
+#logo {
+    width: 100px;
+    @include center;
+    font-family: 'Open Sans';
+}
+
+#slogan {
+    width: 200px;
+    @include center;
+    font-family: 'Open Sans';
+}
+
+$i: 0;
+
+@while $i <=6 {
+    .grid-#{$i} {
+        width: 100px*$i;
+    }
+
+    $i: $i + 1;
+}
+
+@for $i from 1 through 6 {
+    .grid-#{$i} {
+        width: 100px*$i;
+    }
+}
+
+@each $name in $liste {
+    .#{$name}-icon {
+        background-image: url('/assets/#{$name}.png');
+    }
+}
